@@ -1,14 +1,17 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-if vim.g.neovide then
-	vim.o.guifont = "MonoLisa:h15"
-	vim.g.neovide_refresh_rate = 120
-	vim.g.neovide_refresh_rate_idle = 30
-	vim.g.neovide_cursor_vfx_mode = "pixiedust"
-	vim.g.neovide_cursor_vfx_particle_lifetime = 0.5
-	vim.g.neovide_remember_window_size = true
-end
+-- ~/.config/nvim/init.lua
 
+ 
+if vim.g.neovide then
+  vim.o.guifont = "Maple Mono:h15"
+  vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_refresh_rate_idle = 30
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_vfx_particle_lifetime = 0.5
+  vim.g.neovide_remember_window_size = true
+  
+end
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -21,7 +24,7 @@ vim.api.nvim_create_autocmd("ModeChanged", {
   callback = function()
     vim.opt.relativenumber = false
   end,
-  group = "dynamic_line_numbers"
+  group = "dynamic_line_numbers",
 })
 
 -- 退出插入模式时启用相对行号（兼容 Esc 和 Ctrl+C）
@@ -33,5 +36,7 @@ vim.api.nvim_create_autocmd("ModeChanged", {
       vim.opt.relativenumber = true
     end
   end,
-  group = "dynamic_line_numbers"
+  group = "dynamic_line_numbers",
 })
+
+
