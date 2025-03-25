@@ -4,3 +4,4 @@
 
 -- 在插入模式下将 Ctrl+C 映射为 Esc
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true })
+-- lua/keybindings.lua
